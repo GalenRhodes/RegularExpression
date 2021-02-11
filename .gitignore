@@ -8,7 +8,7 @@
 /DocumentArchive.tar
 /Library/
 /Package.resolved
-/Rubicon.framework/
+/*.framework/
 **/grhodes.xcuserdatad/
 /runlog.txt
 **/Package.resolved
