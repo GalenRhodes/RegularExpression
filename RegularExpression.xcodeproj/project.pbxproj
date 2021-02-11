@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1117D061D07EBA15133A07C2 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D8D5A65AC7048B7041EB /* RegularExpression.swift */; };
+		1117D4134A8FDC3714DB2119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D0C6606D6687B3CD65E6 /* Extensions.swift */; };
+		1117D9A95050E0BA0686E244 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D3EA99C1BBED3D7B8DFD /* LinuxMain.swift */; };
 		83869CD025D5CFAE0032134E /* RegularExpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83869CC625D5CFAE0032134E /* RegularExpression.framework */; };
 		83869CD525D5CFAE0032134E /* RegularExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83869CD425D5CFAE0032134E /* RegularExpressionTests.swift */; };
 		83869CD725D5CFAE0032134E /* RegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 83869CC925D5CFAE0032134E /* RegularExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83869CF725D5D9D90032134E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83869CF625D5D9D90032134E /* main.swift */; };
+		83869D0225D5DA310032134E /* PGDocFixer in Frameworks */ = {isa = PBXBuildFile; productRef = 83869D0125D5DA310032134E /* PGDocFixer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +25,44 @@
 			remoteGlobalIDString = 83869CC525D5CFAE0032134E;
 			remoteInfo = RegularExpression;
 		};
+		83869CFE25D5D9F70032134E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83869CBD25D5CFAE0032134E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83869CC525D5CFAE0032134E;
+			remoteInfo = RegularExpression;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		83869CF225D5D9D90032134E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1117D0C6606D6687B3CD65E6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1117D15D1898210B169AB0B0 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		1117D3919EF579D23AE4FE9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1117D3EA99C1BBED3D7B8DFD /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		1117D8D5A65AC7048B7041EB /* RegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpression.swift; sourceTree = "<group>"; };
+		1117DAE66AA5CC95BDD32CB1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		1117DBF72033945366D95B23 /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
+		1117DF1DD384CB03B5E15D9C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		83869CC625D5CFAE0032134E /* RegularExpression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RegularExpression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83869CC925D5CFAE0032134E /* RegularExpression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
 		83869CCA25D5CFAE0032134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83869CCF25D5CFAE0032134E /* RegularExpressionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegularExpressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83869CD425D5CFAE0032134E /* RegularExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressionTests.swift; sourceTree = "<group>"; };
 		83869CD625D5CFAE0032134E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83869CF425D5D9D90032134E /* DocFixer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DocFixer; sourceTree = BUILT_PRODUCTS_DIR; };
+		83869CF625D5D9D90032134E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,15 +81,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83869CF125D5D9D90032134E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83869D0225D5DA310032134E /* PGDocFixer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1117D3E537CCE35B4E77519B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1117DAE66AA5CC95BDD32CB1 /* .gitignore */,
+				1117DBF72033945366D95B23 /* .jazzy.yaml */,
+				1117DF1DD384CB03B5E15D9C /* LICENSE */,
+				1117D15D1898210B169AB0B0 /* Package.swift */,
+				1117D3919EF579D23AE4FE9B /* README.md */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		83869CBC25D5CFAE0032134E = {
 			isa = PBXGroup;
 			children = (
-				83869CC825D5CFAE0032134E /* RegularExpression */,
-				83869CD325D5CFAE0032134E /* RegularExpressionTests */,
+				83869CE325D5CFD20032134E /* Tests */,
+				83869CE225D5CFBE0032134E /* Sources */,
 				83869CC725D5CFAE0032134E /* Products */,
+				1117D3E537CCE35B4E77519B /* Other */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +119,7 @@
 			children = (
 				83869CC625D5CFAE0032134E /* RegularExpression.framework */,
 				83869CCF25D5CFAE0032134E /* RegularExpressionTests.xctest */,
+				83869CF425D5D9D90032134E /* DocFixer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +129,8 @@
 			children = (
 				83869CC925D5CFAE0032134E /* RegularExpression.h */,
 				83869CCA25D5CFAE0032134E /* Info.plist */,
+				1117D8D5A65AC7048B7041EB /* RegularExpression.swift */,
+				1117D0C6606D6687B3CD65E6 /* Extensions.swift */,
 			);
 			path = RegularExpression;
 			sourceTree = "<group>";
@@ -84,6 +142,32 @@
 				83869CD625D5CFAE0032134E /* Info.plist */,
 			);
 			path = RegularExpressionTests;
+			sourceTree = "<group>";
+		};
+		83869CE225D5CFBE0032134E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				83869CF525D5D9D90032134E /* DocFixer */,
+				83869CC825D5CFAE0032134E /* RegularExpression */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		83869CE325D5CFD20032134E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				83869CD325D5CFAE0032134E /* RegularExpressionTests */,
+				1117D3EA99C1BBED3D7B8DFD /* LinuxMain.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		83869CF525D5D9D90032134E /* DocFixer */ = {
+			isa = PBXGroup;
+			children = (
+				83869CF625D5D9D90032134E /* main.swift */,
+			);
+			path = DocFixer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +220,27 @@
 			productReference = 83869CCF25D5CFAE0032134E /* RegularExpressionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		83869CF325D5D9D90032134E /* DocFixer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83869CFA25D5D9D90032134E /* Build configuration list for PBXNativeTarget "DocFixer" */;
+			buildPhases = (
+				83869CF025D5D9D90032134E /* Sources */,
+				83869CF125D5D9D90032134E /* Frameworks */,
+				83869CF225D5D9D90032134E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83869CFF25D5D9F70032134E /* PBXTargetDependency */,
+			);
+			name = DocFixer;
+			packageProductDependencies = (
+				83869D0125D5DA310032134E /* PGDocFixer */,
+			);
+			productName = DocFixer;
+			productReference = 83869CF425D5D9D90032134E /* DocFixer */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +256,9 @@
 					83869CCE25D5CFAE0032134E = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					83869CF325D5D9D90032134E = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = 83869CC025D5CFAE0032134E /* Build configuration list for PBXProject "RegularExpression" */;
@@ -162,12 +270,16 @@
 				Base,
 			);
 			mainGroup = 83869CBC25D5CFAE0032134E;
+			packageReferences = (
+				83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */,
+			);
 			productRefGroup = 83869CC725D5CFAE0032134E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				83869CC525D5CFAE0032134E /* RegularExpression */,
 				83869CCE25D5CFAE0032134E /* RegularExpressionTests */,
+				83869CF325D5D9D90032134E /* DocFixer */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1117D061D07EBA15133A07C2 /* RegularExpression.swift in Sources */,
+				1117D4134A8FDC3714DB2119 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				83869CD525D5CFAE0032134E /* RegularExpressionTests.swift in Sources */,
+				1117D9A95050E0BA0686E244 /* LinuxMain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83869CF025D5D9D90032134E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83869CF725D5D9D90032134E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +335,11 @@
 			isa = PBXTargetDependency;
 			target = 83869CC525D5CFAE0032134E /* RegularExpression */;
 			targetProxy = 83869CD125D5CFAE0032134E /* PBXContainerItemProxy */;
+		};
+		83869CFF25D5D9F70032134E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83869CC525D5CFAE0032134E /* RegularExpression */;
+			targetProxy = 83869CFE25D5D9F70032134E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -347,7 +475,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RegularExpression/Info.plist;
+				INFOPLIST_FILE = Sources/RegularExpression/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,7 +499,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RegularExpression/Info.plist;
+				INFOPLIST_FILE = Sources/RegularExpression/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
-				INFOPLIST_FILE = RegularExpressionTests/Info.plist;
+				INFOPLIST_FILE = Tests/RegularExpressionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -409,13 +537,35 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
-				INFOPLIST_FILE = RegularExpressionTests/Info.plist;
+				INFOPLIST_FILE = Tests/RegularExpressionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.RegularExpressionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		83869CF825D5D9D90032134E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		83869CF925D5D9D90032134E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -451,7 +601,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		83869CFA25D5D9D90032134E /* Build configuration list for PBXNativeTarget "DocFixer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83869CF825D5D9D90032134E /* Debug */,
+				83869CF925D5D9D90032134E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83869D0125D5DA310032134E /* PGDocFixer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */;
+			productName = PGDocFixer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83869CBD25D5CFAE0032134E /* Project object */;
 }
