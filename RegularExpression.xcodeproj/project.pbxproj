@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		1117D061D07EBA15133A07C2 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D8D5A65AC7048B7041EB /* RegularExpression.swift */; };
 		1117D4134A8FDC3714DB2119 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D0C6606D6687B3CD65E6 /* Extensions.swift */; };
-		1117D9A95050E0BA0686E244 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D3EA99C1BBED3D7B8DFD /* LinuxMain.swift */; };
 		83869CD025D5CFAE0032134E /* RegularExpression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83869CC625D5CFAE0032134E /* RegularExpression.framework */; };
 		83869CD525D5CFAE0032134E /* RegularExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83869CD425D5CFAE0032134E /* RegularExpressionTests.swift */; };
 		83869CD725D5CFAE0032134E /* RegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 83869CC925D5CFAE0032134E /* RegularExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83869CF725D5D9D90032134E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83869CF625D5D9D90032134E /* main.swift */; };
-		83869D0225D5DA310032134E /* PGDocFixer in Frameworks */ = {isa = PBXBuildFile; productRef = 83869D0125D5DA310032134E /* PGDocFixer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83869D0225D5DA310032134E /* PGDocFixer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +232,7 @@
 			);
 			name = DocFixer;
 			packageProductDependencies = (
-				83869D0125D5DA310032134E /* PGDocFixer */,
+				83869D0125D5DA310032134E,
 			);
 			productName = DocFixer;
 			productReference = 83869CF425D5D9D90032134E /* DocFixer */;
@@ -271,7 +268,7 @@
 			);
 			mainGroup = 83869CBC25D5CFAE0032134E;
 			packageReferences = (
-				83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */,
+				83869D0025D5DA310032134E,
 			);
 			productRefGroup = 83869CC725D5CFAE0032134E /* Products */;
 			projectDirPath = "";
@@ -316,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83869CD525D5CFAE0032134E /* RegularExpressionTests.swift in Sources */,
-				1117D9A95050E0BA0686E244 /* LinuxMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,7 +609,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */ = {
+		83869D0025D5DA310032134E = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer";
 			requirement = {
@@ -624,9 +620,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		83869D0125D5DA310032134E /* PGDocFixer */ = {
+		83869D0125D5DA310032134E = {
 			isa = XCSwiftPackageProductDependency;
-			package = 83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */;
+			package = 83869D0025D5DA310032134E;
 			productName = PGDocFixer;
 		};
 /* End XCSwiftPackageProductDependency section */
