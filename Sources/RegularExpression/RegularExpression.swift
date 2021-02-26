@@ -306,9 +306,13 @@ open class RegularExpression {
     open func forEachMatch(in str: String, options: [RegularExpression.MatchingOptions] = [], range: Range<String.Index>? = nil, using body: (Match?, [MatchingFlags]) throws -> Bool) throws {
         var error: Error? = nil
         nsRegex.enumerateMatches(in: str, options: MatchingOptions.convert(from: options), range: nsRange(range, string: str)) { result, flags, stop in
-            let match: Match? = ((result == nil) ? nil : Match(str, match: result!))
-            do { stop.pointee = (try body(match, MatchingFlags.convert(from: flags)) ? true : false) }
-            catch let e { error = e }
+            do {
+                stop.pointee = (try body(((result == nil) ? nil : Match(str, match: result!)), MatchingFlags.convert(from: flags)) ? true : false)
+            }
+            catch let e {
+                error = e
+                stop.pointee = true
+            }
         }
         if let e = error { throw e }
     }
