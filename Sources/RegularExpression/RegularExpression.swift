@@ -521,21 +521,20 @@ open class RegularExpression {
     /// This class encapsulates a single capture group.
     ///
     public class Group {
-        @usableFromInline let match:   Match
-        @usableFromInline let nsRange: NSRange
+        @usableFromInline let match: Match
 
         /*=======================================================================================================================================================================*/
         /// The range of the search string for this capture group of `nil` if this capture group did not participate in the match.
         ///
-        public internal(set) lazy var range:     Range<String.Index>? = match.string.range(nsRange: nsRange)
+        public let range: Range<String.Index>?
         /*=======================================================================================================================================================================*/
         /// The substring of the search string for this capture group of `nil` if this capture group did not participate in the match.
         ///
-        public internal(set) lazy var subString: String?              = ((range == nil) ? nil : String(match.string[range!]))
+        public internal(set) lazy var subString: String? = ((range == nil) ? nil : String(match.string[range!]))
 
         @inlinable init(_ match: Match, nsRange: NSRange) {
             self.match = match
-            self.nsRange = nsRange
+            self.range = ((nsRange.location == NSNotFound) ? nil : Range<String.Index>(nsRange, in: match.string))
         }
     }
 
