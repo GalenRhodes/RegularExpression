@@ -89,7 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1117D3E537CCE35B4E77519B /* Other */ = {
+		1117D3E537CCE35B4E77519B /* Project Files */ = {
 			isa = PBXGroup;
 			children = (
 				1117DAE66AA5CC95BDD32CB1 /* .gitignore */,
@@ -98,7 +98,7 @@
 				1117D15D1898210B169AB0B0 /* Package.swift */,
 				1117D3919EF579D23AE4FE9B /* README.md */,
 			);
-			name = Other;
+			name = "Project Files";
 			sourceTree = "<group>";
 		};
 		1117D47C9691BE0BA941D476 /* Other */ = {
@@ -116,7 +116,7 @@
 				83869CE325D5CFD20032134E /* Tests */,
 				83869CE225D5CFBE0032134E /* Sources */,
 				83869CC725D5CFAE0032134E /* Products */,
-				1117D3E537CCE35B4E77519B /* Other */,
+				1117D3E537CCE35B4E77519B /* Project Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,7 +240,7 @@
 			);
 			name = DocFixer;
 			packageProductDependencies = (
-				83869D0125D5DA310032134E,
+				83869D0125D5DA310032134E /* PGDocFixer */,
 			);
 			productName = DocFixer;
 			productReference = 83869CF425D5D9D90032134E /* DocFixer */;
@@ -276,7 +276,7 @@
 			);
 			mainGroup = 83869CBC25D5CFAE0032134E;
 			packageReferences = (
-				83869D0025D5DA310032134E,
+				83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */,
 			);
 			productRefGroup = 83869CC725D5CFAE0032134E /* Products */;
 			projectDirPath = "";
@@ -617,7 +617,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		83869D0025D5DA310032134E = {
+		83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer";
 			requirement = {
@@ -628,9 +628,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		83869D0125D5DA310032134E = {
+		83869D0125D5DA310032134E /* PGDocFixer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 83869D0025D5DA310032134E;
+			package = 83869D0025D5DA310032134E /* XCRemoteSwiftPackageReference "PGDocFixer" */;
 			productName = PGDocFixer;
 		};
 /* End XCSwiftPackageProductDependency section */

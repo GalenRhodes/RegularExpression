@@ -1,4 +1,4 @@
-/************************************************************************//**
+/****************************************************************************
  *     PROJECT: Rubicon
  *    FILENAME: RegularExpression.swift
  *         IDE: AppCode
@@ -18,7 +18,7 @@
  * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- *//************************************************************************/
+ ***************************************************************************/
 
 import Foundation
 import CoreFoundation
@@ -261,10 +261,10 @@ extension RegularExpression {
     ///   - str: the search string.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
     ///   - range: the range of the string to search.
-    ///   - body: the Block that is called for each match found in the search string. The Block takes two (2) parameters&#58; <dl><dt><b><i>match</i></b></dt><dd>An instance of
-    ///           `RegularExpression.Match` or `nil` if the Block is simply being called with the flags `RegularExpression.MatchingFlags.completed`,
-    ///           `RegularExpression.MatchingFlags.hitEnd`, or `RegularExpression.MatchingFlags.internalError`</dd> <dt><b><i>flags</i></b></dt><dd>An array of
-    ///           `RegularExpression.MatchingFlags`.</dd></dl> The closure returns `true` to stop the enumeration or `false` to continue to the next match.
+    ///   - block: the Block that is called for each match found in the search string. The Block takes two (2) parameters&#58; <dl><dt><b><i>match</i></b></dt><dd>An instance of
+    ///            `RegularExpression.Match` or `nil` if the Block is simply being called with the flags `RegularExpression.MatchingFlags.completed`,
+    ///            `RegularExpression.MatchingFlags.hitEnd`, or `RegularExpression.MatchingFlags.internalError`</dd> <dt><b><i>flags</i></b></dt><dd>An array of
+    ///            `RegularExpression.MatchingFlags`.</dd></dl> The closure returns `true` to stop the enumeration or `false` to continue to the next match.
     ///
     @inlinable public func forEachMatch(in str: String, options: MatchingOptions = [], range: Range<String.Index>, using block: (Match?, MatchingFlags, inout Bool) throws -> Void) rethrows {
         try withoutActuallyEscaping(block) { (_block) -> Void in
@@ -326,10 +326,10 @@ extension RegularExpression {
     /// - Parameters:
     ///   - str: the search string or substring.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
-    ///   - body: the Block that is called for each match found in the search string. The Block takes two (2) parameters&#58; <dl><dt><b><i>match</i></b></dt><dd>An instance of
-    ///           `RegularExpression.Match` or `nil` if the Block is simply being called with the flags `RegularExpression.MatchingFlags.completed`,
-    ///           `RegularExpression.MatchingFlags.hitEnd`, or `RegularExpression.MatchingFlags.internalError`</dd> <dt><b><i>flags</i></b></dt><dd>An array of
-    ///           `RegularExpression.MatchingFlags`.</dd></dl> The closure returns `true` to stop the enumeration or `false` to continue to the next match.
+    ///   - block: the Block that is called for each match found in the search string. The Block takes two (2) parameters&#58; <dl><dt><b><i>match</i></b></dt><dd>An instance of
+    ///            `RegularExpression.Match` or `nil` if the Block is simply being called with the flags `RegularExpression.MatchingFlags.completed`,
+    ///            `RegularExpression.MatchingFlags.hitEnd`, or `RegularExpression.MatchingFlags.internalError`</dd> <dt><b><i>flags</i></b></dt><dd>An array of
+    ///            `RegularExpression.MatchingFlags`.</dd></dl> The closure returns `true` to stop the enumeration or `false` to continue to the next match.
     ///
     @inlinable public func forEachMatch<S>(in str: S, options: MatchingOptions = [], using block: (Match?, MatchingFlags, inout Bool) throws -> Void) rethrows where S: StringProtocol {
         let (_str, _rng) = toStringAndRange(str: str)
@@ -349,8 +349,8 @@ extension RegularExpression {
     ///   - str: the search string.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
     ///   - range: the range of the string to search.
-    ///   - body: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of `RegularExpression.Group` objects
-    ///           representing each capture group and returns `true` to stop the enumeration or `false` to continue to the next match.
+    ///   - block: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of `RegularExpression.Group` objects
+    ///            representing each capture group and returns `true` to stop the enumeration or `false` to continue to the next match.
     ///
     @inlinable public func forEachMatchGroup(in str: String, options: MatchingOptions = [], range: Range<String.Index>, using block: ([Group], inout Bool) throws -> Void) rethrows {
         try forEachMatch(in: str, options: options, range: range) { match, _, stop in if let m = match { try block(m.groups, &stop) } }
@@ -368,8 +368,8 @@ extension RegularExpression {
     /// - Parameters:
     ///   - str: the search string or substring.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
-    ///   - body: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of `RegularExpression.Group` objects
-    ///           representing each capture group and returns `true` to stop the enumeration or `false` to continue to the next match.
+    ///   - block: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of `RegularExpression.Group` objects
+    ///            representing each capture group and returns `true` to stop the enumeration or `false` to continue to the next match.
     ///
     @inlinable public func forEachMatchGroup<S>(in str: S, options: MatchingOptions = [], using block: ([Group], inout Bool) throws -> Void) rethrows where S: StringProtocol {
         let (_str, _rng) = toStringAndRange(str: str)
@@ -383,9 +383,9 @@ extension RegularExpression {
     ///   - str: the search string.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
     ///   - range: the range of the string to search.
-    ///   - body: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of Strings representing each capture
-    ///           group and returns `true` to stop the enumeration or `false` to continue to the next match. Any of the strings in the array may be `nil` if that capture group did
-    ///           not participate in the match.
+    ///   - block: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of Strings representing each capture
+    ///            group and returns `true` to stop the enumeration or `false` to continue to the next match. Any of the strings in the array may be `nil` if that capture group
+    ///            did not participate in the match.
     ///
     @inlinable public func forEachMatchString(in str: String, options: MatchingOptions = [], range: Range<String.Index>, using block: ([String?], inout Bool) throws -> Void) rethrows {
         try forEachMatchGroup(in: str, options: options, range: range) { groups, stop in try block(groups.map { $0.subString }, &stop) }
@@ -397,9 +397,9 @@ extension RegularExpression {
     /// - Parameters:
     ///   - str: the search string or substring.
     ///   - options: The matching options to report. See `RegularExpression.MatchingOptions` for the supported values.
-    ///   - body: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of Strings representing each capture
-    ///           group and returns `true` to stop the enumeration or `false` to continue to the next match. Any of the strings in the array may be `nil` if that capture group did
-    ///           not participate in the match.
+    ///   - block: the closure that is called for each match found in the search string. The closure takes one parameter which is an array of Strings representing each capture
+    ///            group and returns `true` to stop the enumeration or `false` to continue to the next match. Any of the strings in the array may be `nil` if that capture group
+    ///            did not participate in the match.
     ///
     @inlinable public func forEachMatchString<S>(in str: S, options: MatchingOptions = [], using block: ([String?], inout Bool) throws -> Void) rethrows where S: StringProtocol {
         let (_str, _rng) = toStringAndRange(str: str)
@@ -412,7 +412,7 @@ extension RegularExpression {
     /// ordinary characters, as will a $ not followed by digits. Backslash will escape both $ and itself.
     /// 
     /// - Parameters:
-    ///   - string: the string.
+    ///   - str: the string.
     ///   - options: the match options.
     ///   - range: the range of the string to search in. If `nil` then the entire string will be searched.
     ///   - templ: the replacement template.
@@ -430,7 +430,7 @@ extension RegularExpression {
     /// ordinary characters, as will a $ not followed by digits. Backslash will escape both $ and itself.
     /// 
     /// - Parameters:
-    ///   - string: the string or substring.
+    ///   - str: the string or substring.
     ///   - options: the match options.
     ///   - templ: the replacement template.
     /// - Returns: a tuple with the modified string and the number of replacements made.
@@ -448,7 +448,7 @@ extension RegularExpression {
     ///   - str: the source string.
     ///   - options: the match options.
     ///   - range: the range of the string to search in. If `nil` then the entire string will be searched.
-    ///   - body: the closure that will return the replacement string. It is called once for each match found in the source string.
+    ///   - block: the closure that will return the replacement string. It is called once for each match found in the source string.
     /// - Returns: a tuple with the modified string and the number of replacements made.
     /// - Throws: if the closure throws an error.
     ///
@@ -477,7 +477,7 @@ extension RegularExpression {
     /// - Parameters:
     ///   - str: the source string or substring.
     ///   - options: the match options.
-    ///   - body: the closure that will return the replacement string. It is called once for each match found in the source string.
+    ///   - block: the closure that will return the replacement string. It is called once for each match found in the source string.
     /// - Returns: a tuple with the modified string and the number of replacements made.
     /// - Throws: if the closure throws an error.
     ///
